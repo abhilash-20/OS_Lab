@@ -17,6 +17,11 @@ int main()
     msgid_snd=msgget(key_snd,IPC_CREAT|0666);
     msgid_rcv=msgget(key_rcv,IPC_CREAT|0666);
     buf.mtype=1;
-    
+    printf("Enter data: ");
+    scanf("%s",buf.mtext);
+    msgsnd(msgid_snd,&buf,sizeof(buf),0);
+    printf("Data sent: %s",buf.mtext);
+    msgrcv(msgid_rcv,&buf1,sizeof(buf),1,0);
+    printf("\nData received: %s ",buf1.mtext);
     return 0;
 }
