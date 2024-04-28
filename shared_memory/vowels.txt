@@ -1,0 +1,2 @@
+we need to send a string
+receiver me print karo the number of vowels.
