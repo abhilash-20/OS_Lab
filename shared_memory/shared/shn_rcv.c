@@ -5,7 +5,7 @@
 int main()
 {
     char *p;
-     char *p1,buf1[20];
+    int *q;
     int n=shmget(12345,25,IPC_CREAT|0666);
     if(n!=1)
     {
@@ -20,7 +20,14 @@ int main()
                 c++;
             }
         }
-        printf("\n%d",c);
+    int m=shmget(12321,25,IPC_CREAT|0666);
+    if(m!=1)
+    {
+        q=(int*)shmat(m,NULL,0);
+        *q=c;
+    }
+
+        //printf("\n%d",c);
     }
     return 0;
 }
