@@ -23,6 +23,7 @@ int main()
 	/*
 	 * msgsnd(indentifier,address of the buffer/message struct containing the data you want to send,
 	 */
+	// we used a new buffer as we were required to send a new message
 	printf("Data sent: %s",buf.mtext);
 	msgrcv(msgid_rcv,&buf1,sizeof(buf1),1,0);
 	printf("\nnumber of vowels :%s ",buf1.mtext);

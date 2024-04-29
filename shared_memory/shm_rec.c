@@ -3,7 +3,7 @@
 #include<string.h>
 int main()
 {
-        char *p,buf[20];
+        char *p;
         int n=shmget(12325,25,IPC_CREAT|0666);
         if(n!=1)
         {
