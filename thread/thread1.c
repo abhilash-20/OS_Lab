@@ -21,5 +21,5 @@ int main()
 	pthread_create(&id[0],NULL,&test,0);
 	pthread_create(&id[1],NULL,&test1,0);
 	sleep(1);
-	printf("Final result: %d",x);
+	printf("Final result: %d ",x);
 }
